@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=0" />
+    <style>
+        html,
+        body,
+        .body,
+        video {
+            height: 100%;
+            width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding-bottom: 60px;
+        }
+
+        video {
+            object-fit: contain;
+        }
+
+        .btn-wrap {
+            height: 60px;
+            display: flex;
+        }
+
+        .btn-wrap .btn {
+            background-color: #ddd;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            flex: 1;
+            height: 100%;
+        }
+
+        .body {
+            position: relative;
+        }
+
+        #dimensions {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 14px;
+            z-index: 1;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+<div class="body">
+    <video src="" controls autoplay></video>
+    <div id="dimensions"></div>
+</div>
+<div class="btn-wrap">
+    <button class="btn" type="button" id="hd">hd</button>
+    <button class="btn" type="button" id="vga">vga</button>
+</div>
+<script>
+    'use strict';
+
+    var hdButton = document.querySelector('#hd');
+    var vgaButton = document.querySelector('#vga');
+    var dimensions = document.querySelector('#dimensions');
+    var video = document.querySelector('video');
+    var stream;
+    //navigator.mediaDevices.getUserMedia 以后的chrome会支持
+    navigator.getUserMedia = navigator.getUserMedia ||
+        navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+
+    function successCallback(stream) {
+        console.log(stream);
+        window.stream = stream; // stream available to console
+        stream.onactive = function () {
+            console.log('onactive');
+        }
+        stream.onaddtrack = function () {
+            console.log('onaddtrack');
+        }
+        stream.onended = function () {
+            console.log('onended');
+        }
+        stream.oninactive = function () {
+            console.log('oninactive');
+        }
+        stream.onremovetrack = function () {
+            console.log('onremovetrack');
+        }
+        var src = window.URL.createObjectURL(stream);
+        video.src = src;
+        console.log(src);
+    }
+
+    function errorCallback(error) {
+        dimensions.innerHTML = 'error:' + error.message;
+        console.log(error);
+    }
+
+    // 此参数会导致崩溃
+    // var qvgaConstraints = {
+    //     video: {
+    //         audio: true,
+    //         mandatory: {
+    //             maxWidth: 320,
+    //             maxHeight: 180
+    //         }
+    //     }
+    // };
+
+    var vgaConstraints = {
+        video: {
+            audio: true,
+            mandatory: {
+                maxWidth: 640,
+                maxHeight: 360
+            }
+        }
+    };
+
+    var hdConstraints = {
+        video: {
+            audio: true,
+            mandatory: {
+                minWidth: 1280,
+                minHeight: 720
+            }
+        }
+    };
+    vgaButton.onclick = function () {
+        getMedia(vgaConstraints);
+    };
+    hdButton.onclick = function () {
+        getMedia(hdConstraints);
+    };
+
+    function getMedia(constraints) {
+        if (!!stream) {
+            video.src = null;
+            // 没有stop方法？ TODO
+            try {
+                stream.stop();
+            } catch (e) {
+                stream.removeTrack();
+            }
+        }
+        navigator.getUserMedia(constraints, function (stream) {
+            console.log(stream);
+            window.stream = stream; // stream available to console
+            video.src = window.URL.createObjectURL(stream);
+        }, function (error) {
+            dimensions.innerHTML = 'error:' + error.message;
+        });
+    }
+</script>
+</body>
+
+</html>

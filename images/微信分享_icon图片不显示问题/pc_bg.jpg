@@ -1,0 +1,61 @@
+<!DOCTYPE html><html><head><title data-react-helmet="true">HTTP 404 - SegmentFault</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta httpequiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="alexaVerifyID" content="LkzCRJ7rPEUwt6fVey2vhxiw1vQ">
+    <meta name="apple-itunes-app" content="app-id=958101793, app-argument=">
+    <meta property="qc:admins" content="15317273575564615446375">
+    <meta name="msapplication-TileColor" content="#009a61">
+    <meta name="sogou_site_verification" content="MKVKCoIjwL">
+    <meta name="360-site-verification" content="737314c9bf48873a1a0a22295203d9d1">
+    <meta rel="apple-touch-icon" href="https://cdn.segmentfault.com/r-8abbbd56/touch-icon.png">
+    <meta name="msapplication-square150x150logo" content="https://cdn.segmentfault.com/r-8abbbd56/touch-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.segmentfault.com/r-8abbbd56/favicon.ico">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="SegmentFault">
+    <link rel="alternate" type="application/atom+xml" href="/feeds/questions" title="SegmentFault 最新问题">
+    <link rel="alternate" type="application/atom+xml" href="/feeds/blogs" title="SegmentFault 最新文章">
+    <link rel="stylesheet" href="https://cdn.segmentfault.com/r-8abbbd56/umi.css">
+    <script>
+      window.routerBase = "/";
+    </script>
+    <script>
+      window.publicPath =
+        window.resourceBaseUrl || "https://cdn.segmentfault.com/r-8abbbd56/";
+    </script>
+    <script>
+      //! umi version: 3.5.0
+    </script>
+  <link rel="preload" href="https://cdn.segmentfault.com/r-8abbbd56/layouts__index~p__Video__Add.chunk.css" as="style" /><link rel="stylesheet" href="https://cdn.segmentfault.com/r-8abbbd56/layouts__index~p__Video__Add.chunk.css" />
+<link rel="preload" href="https://cdn.segmentfault.com/r-8abbbd56/layouts__index.chunk.css" as="style" /><link rel="stylesheet" href="https://cdn.segmentfault.com/r-8abbbd56/layouts__index.chunk.css" />
+</head>
+  <body>
+    <div id="root"><div class="box-404-wrap"><div class="box"><div class="d-flex flex-column align-items-center"><div class="text-wrap"><h1 data-t="404" class="h1">404</h1></div><div class="text-center mt-2">当前页面无法访问，可能没权限或已删除 <br/> 长老们，去别处看看吧 彡(-_-;)彡</div><div class="mt-4"><a href="/" role="button" tabindex="0" class="btn btn-primary">回首页</a></div></div></div></div></div>
+	<script>
+  window.g_useSSR = true;
+  window.g_initialProps = {"router":{"location":{"pathname":"\u002Fu\u002Fjsoncode\u002Fquestions\u002Fdist\u002Fimg\u002Fpc\u002Fview_bg.jpg","search":"","hash":"","query":{},"state":undefined,"key":"chvo4y"},"action":"POP"},"@@dva":0,"action":{},"article":{"articles":{"rows":[],"size":0,"offset":0,"hasMore":true,"error":false,"loading":false,"isStopLoad":false,"cutLoadNum":1,"isLoadedFirstRecommend":false,"query":""},"currentTab":""},"articleDetail":{"artDetail":{},"alertMsg":{"showAlert":false,"msg":""},"articleRelated":[]},"editor":{"markdownContent":"","syncMarkdown":false,"title":{"value":"","isInvalid":false,"errorMsg":""},"log":{"value":"","isInvalid":false,"errorMsg":""},"tags":{"value":[],"isInvalid":false,"errorMsg":""},"draftInfo":{"id":"","status":""},"isFull":false,"initTags":[],"detail":{}},"global":{"sessionUser":{"user":{"id":1030000004569616,"slug":"jsoncode","name":"jsoncode","url":"\u002Fu\u002Fjsoncode","rank":3818,"profile_url":"\u002Fu\u002Fjsoncode\u002Fprofile","avatar_url":"https:\u002F\u002Favatar-static.segmentfault.com\u002F377\u002F460\u002F3774603972-56e6a42c83ff8_big64","created":1457502470},"roles":{"is_admin":false,"is_editor":false},"is_change":false,"can_change":false},"isHiddenHeader":false,"isHiddenFooter":false,"title":"SegmentFault 思否","isShowLogin":false,"beginnerGuideState":{"visible":false,"type":1},"isShowBindMobile":false,"authChannel":"","unactivated":false,"isShowRegister":false,"headOptions":{"keywords":"SegmentFault,思否,开发者社区,技术新闻资讯,技术问答社区,技术博客专栏,技术笔记,技术号,技术圈,技术直播,在线编程,开源社区,开源项目,程序员,云计算,AI,区块链,前端,后端,小程序,安全,运维,软件开发,编程,cto,javascript,php,python,java,ios,android","description":"SegmentFault 思否是中国领先的开发者技术社区。我们以技术问答、技术专栏、技术课程、技术资讯为核心的产品形态，为开发者提供纯粹、高质的技术交流平台。"},"notices":[],"sessionInfo":{"key":"0cb8e1f514acd4d589c6e8f080c1f02b","login":true,"id":1030000004569616},"singleNotice":"","currentRoute":{"customLayout":true,"headerType":undefined,"eggCtx":{"request":{"method":"GET","url":"\u002Fu\u002Fjsoncode\u002Fquestions\u002Fdist\u002Fimg\u002Fpc\u002Fview_bg.jpg","header":{"host":"segmentfault.com","x-https-cn":"yes","x-ddos":"yes","connection":"close","user-agent":"Mozilla\u002F5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\u002F537.36 (KHTML, like Gecko) Chrome\u002F96.0.4664.110 Safari\u002F537.36","x-true-ip":"203.156.215.133","x-real-ip":"203.156.215.133","web-server-type":"nginx","wl-proxy-client-ip":"203.156.215.133","x-forwarded-for":"203.156.215.133","x-forwarded-proto":"https","x-forwarded-cluster":"waf,","eagleeye-traceid":"7b39758816396346597114172ea34b","sec-ch-ua":"\" Not A;Brand\";v=\"99\", \"Chromium\";v=\"96\", \"Google Chrome\";v=\"96\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","accept":"*\u002F*","sec-fetch-site":"none","sec-fetch-mode":"cors","sec-fetch-dest":"empty","accept-encoding":"gzip, deflate, br","accept-language":"zh-CN,zh;q=0.9,en;q=0.8","cookie":"csrfToken=gVlUQDdfsp2Wm7gGEhIgOt-N; _ga=GA1.2.641905505.1634123270; PHPSESSID=0cb8e1f514acd4d589c6e8f080c1f02b; PHPSESSID=0cb8e1f514acd4d589c6e8f080c1f02b; acw_tc=65c86a0916396342303596656e2b5d006f97a03ac4ac063903de2945a99dbe","eagleeye-rpcid":"0.1"}},"response":{"status":404,"message":"Not Found","header":{"set-cookie":["PHPSESSID=0cb8e1f514acd4d589c6e8f080c1f02b; path=\u002F; max-age=604800; expires=Thu, 23 Dec 2021 06:04:19 GMT; domain=.segmentfault.com"]}},"app":{"env":"prod","name":"server","baseDir":"\u002Fusr\u002Fsrc\u002Fapp","subdomainOffset":2,"config":"\u003Cegg config\u003E","controller":"\u003Cegg controller\u003E","httpclient":"\u003Cegg httpclient\u003E","loggers":"\u003Cegg loggers\u003E","middlewares":"\u003Cegg middlewares\u003E","router":"\u003Cegg router\u003E","serviceClasses":"\u003Cegg serviceClasses\u003E"},"originalUrl":"\u002Fu\u002Fjsoncode\u002Fquestions\u002Fdist\u002Fimg\u002Fpc\u002Fview_bg.jpg","req":"\u003Coriginal node req\u003E","res":"\u003Coriginal node res\u003E","socket":"\u003Coriginal node socket\u003E"}},"letterNum":0,"noticeNum":0,"serverData":{"userAgent":"Mozilla\u002F5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\u002F537.36 (KHTML, like Gecko) Chrome\u002F96.0.4664.110 Safari\u002F537.36","Token":"0cb8e1f514acd4d589c6e8f080c1f02b","Authorization":""},"userStat":{},"newTask":{},"followedTags":[],"globalCss":"","baiduOxAppState":{"isShow":false,"copyUrl":""},"pageUsers":{},"wxShareCover":"","isBaiduOxApp":false,"showProductAuthModal":{"isShow":false,"title":""},"routeInterceptor":{"path":""},"safeCheckModal":{"isShow":false,"pageSource":""}},"video":{"videoData":{},"relationVideos":[],"videos":{"rows":[],"limit":0,"offset":0,"hasMore":true},"lives":[]},"activity":{"recommendList":[],"newestList":[],"finishedList":{},"eventType":[],"cityList":[]},"activityDetail":{"detailData":{}},"badges":{"listData":{},"detail":{},"records":{"page":1,"rows":[]},"loading":false},"blogHome":{"loading":false,"blogDetail":{},"articleData":{}},"blogs":{"channels":{},"articles":{"mode":"scrollLoad","page":1,"rows":[],"size":0,"offset":0,"hasMore":true,"error":false,"loading":false,"isStopLoad":false,"cutLoadNum":1,"isLoadedFirstRecommend":false},"currentTab":"recommendation","notices":{},"events":{},"recommendArticles":{},"hotQuestions":{},"hotTestData":{},"banners":{},"showOneLoading":false},"bookmark":{"loading":false,"detailInfo":{},"listInfo":{"page":1,"total_page":0,"rows":[]}},"deactivate":{"checkResult":{}},"dianping":{"homeInfo":{},"categroies":[],"categoryList":[],"categoryInfo":{},"loading":false,"companyInfo":{}},"dpDetail":{"dpDetail":{},"dpList":{"page":1,"total_page":10,"rows":[]},"usedsAndWishs":{"useds":0,"wisheds":0}},"draft":{"listData":{"rows":[],"hasMore":false,"page":1},"inviteListData":{"rows":[],"hasMore":false,"page":1},"inviteRegisterList":{"rows":[],"hasMore":false,"page":1},"loading":true},"help":{"reportRecord":{},"violationRecord":{},"appealsRecord":{},"communityGuide":{}},"letterDetail":{"letterData":{"rows":[],"page":1,"size":100,"total_page":0,"hasMore":true},"loading":false,"readAll":false},"inbox":{"list":{"page":1,"count":0,"rows":{"inbox":{},"messages":[]},"total_page":1},"loading":false},"note":{"notes":{"rows":[],"page":1,"size":30,"hasMore":false,"sort":"modified","query":"mine","q":""},"bookmarkNotes":{"rows":[],"page":1,"size":30,"hasMore":false,"sort":"modified"},"noteDetail":{},"detail":[]},"noticeDetail":{"noticeData":{"rows":[],"offset":"","hasMore":true,"isStopScrollLoad":false,"loadedNum":1},"loading":false,"readAll":false},"personal":{"realTabName":"timeline","personalInfo":{},"listInfo":{},"blogs":[],"tags":{},"badges":{},"ranks":{},"loading":false,"financeInfo":{}},"personalSetting":{"userInfo":{},"accountInfo":{},"notifyInfo":{},"blockInfo":{"rows":[],"page":1,"total_page":1},"labInfo":{},"privacyInfo":{},"errorMsg":{"type":"","msg":""}},"portal":{"pageData":{},"noticeData":[]},"question":{"questionDetail":{},"relateDetail":{}},"questionList":{"questionList":{"page":1,"size":30,"count":0,"total_page":0,"rows":[]},"updateList":{"offset":"","rows":[]},"showLoading":false,"hostData":{},"userRank":{},"notices":{},"loading":false},"review":{"loading":true,"articelDetail":{},"suggestEditDetail":{},"tagEditDetail":{},"questionDetail":{},"answerDetail":{},"closeDetail":{},"tagCleanDetail":{},"homeData":{"rows":[]}},"rivision":{"breadNav":[],"detail":[]},"search":{"result":{"rows":[],"page":1,"size":15,"q":"","total_page":0,"query":""}},"sites":{"questionList":{"page":1,"size":30,"count":0,"total_page":0,"rows":[]},"loading":false,"information":{},"articles":[]},"sitesSet":{"loading":false,"information":{}},"tag":{"rows":[],"loadMoreType":"scroll","offset":0,"page":1,"pageSize":30,"info":{},"loadedNum":0,"hasMore":false,"isStopLoad":false,"type":"","totalPage":0,"sort":"newest","allTagList":{}},"tagRivision":{"tagInfo":{},"detail":[]},"userTop":{"data":{}},"loading":{"global":false,"models":{},"effects":{}}};
+	</script>
+
+    <script src="https://static.geetest.com/static/tools/gt.js"></script>
+    <script>
+      (function () {
+        var data = window.g_initialProps["gtagData"] || window["gtagData"];
+        var script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=UA-918487-8";
+        script.async = true;
+        script.onload = function () {
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () {
+            window.dataLayer.push(arguments);
+          };
+          window.gtag("js", new Date());
+          window.gtag("config", "UA-918487-8");
+          data && window.gtag("set", data);
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script>
+    <script src="https://cdn.segmentfault.com/r-8abbbd56/umi.js"></script>
+  
+
+</body></html>

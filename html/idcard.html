@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="email=no" />
+  <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+  <title>身份证号校验</title>
+  <style>
+    html,
+    body,
+    .app {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-weight: 300;
+    }
+
+    .app {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 3em;
+      color: #fff;
+      box-sizing: border-box;
+      text-align: center;
+      background-color: #159957;
+      background-image: linear-gradient(120deg, #155799, #159957);
+    }
+    .content {
+      height: 100px;
+    }
+
+    h2 {
+      font-weight: 300;
+      margin-top: -100px;
+    }
+
+    input {
+      width: 300px;
+      height: 40px;
+      border: 0;
+      padding: 10px;
+      outline: 0;
+      font-size: 20px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      text-align:center;
+    }
+    .footer{
+      position:absolute;
+      bottom:30px;
+      left:0;
+      right:0;
+      text-align:center;
+      font-size:12px;
+    }
+    .footer a{
+      color:#fff;
+      text-decoration:none;
+    }
+    .btn-wrap{
+      padding:15px;
+    }
+    .btn-wrap .btn{
+      border:0;
+      color:#086b47;
+      width:300px;
+      height:44px;
+      line-height:44px;
+      padding:0;
+      margin:0;
+      text-align:center;
+      background:rgba(255,255,255,.4);
+    }
+  </style>
+</head>
+
+<body>
+<div id="app" class="app" @mousedown="mousedown" @mouseup="mouseup" @touchstart="mousedown" @touchcancel="mouseup" @touchmove="mouseup" @touchend="mouseup">
+  <h2>身份证号校验</h2>
+  <input type="text" v-model="id">
+  <div>
+    <div v-text="show" class="content"></div>
+    <div class="btn-wrap">
+      <button class="btn" @click="randomCreateId()">随机生成一个身份证号</button>
+    </div>
+  </div>
+  <div class="footer">
+    <a href="https://github.com/jsoncode/jsoncode.github.io/issues">问题反馈·bug提交</a>
+  </div>
+</div>
+<script src="https://cdn.bootcss.com/vue/2.2.1/vue.min.js"></script>
+<script src="../js/IDCard.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: {
+      id: '',
+      show: '',
+      timeTag: 0,
+      intervalTimer: null
+    },
+    methods: {
+      randomCreateId: function(real) {
+        var vm = this;
+        var province = '';
+        var city = '';
+        var county = '';
+        var year = (new Date().getFullYear() - 120) + parseInt(Math.random() * (new Date().getFullYear() - (new Date().getFullYear() - 120))) + 1;
+        var month = parseInt(Math.random() * 12) + 1;
+        var day = parseInt(Math.random() * (new Date(year, month, 0).getDate())) + 1;
+        var order = parseInt(Math.random() * 99) + 1;
+        var sex = parseInt(Math.random() * 9) + 1;
+        var last = '';
+        var newMap = {};
+        var o = JSON.parse(JSON.stringify(IDCard));
+        for (var i in o) {
+          var item = o[i];
+          delete item.name;
+          if (Object.keys(item).length > 0) {
+            newMap[i] = item;
+          }
+        }
+        var provinces = Object.keys(newMap);
+        province = provinces[parseInt(Math.random() * provinces.length)];
+        var citys = Object.keys(newMap[province]);
+        city = citys[parseInt(Math.random() * citys.length)];
+        delete newMap[province][city].name;
+        var countys = Object.keys(newMap[province][city]);
+        county = countys[parseInt(Math.random() * countys.length)];
+        month = month < 10 ? '0' + month : month;
+        day = day < 10 ? '0' + day : day;
+        order = order.toString();
+        order = order.length == 1 ? '0' + order : order;
+        var id = '' + province + city + county + year + month + day + order + sex;
+        last = vm.getLastNum(id, real);
+        id += last;
+        vm.id = id;
+      },
+      getLastNum: function(id17, real) {
+        var id = id17.split('').map(function(item) {
+          return item * 1;
+        });
+        var num = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+        var tag = [1, 0, 'X', 9, 8, 7, 6, 5, 4, 3, 2];
+        var n = 0;
+        num.forEach(function(item, index) {
+          n += item * id[index];
+        });
+        var lastIdx = '';
+        lastIdx = n % 11;
+        if (real == undefined || !real) {
+          tag.splice(lastIdx, 1);
+          lastIdx = parseInt(Math.random() * tag.length);
+        }
+        return '' + tag[lastIdx];
+      },
+      mousedown: function() {
+        var vm = this;
+        vm.intervalTimer = setInterval(function() {
+          vm.timeTag += 100;
+          if (vm.timeTag > 3e3) {
+            vm.randomCreateId(true);
+            clearInterval(vm.intervalTimer);
+          }
+        }, 100);
+      },
+      mouseup: function() {
+        var vm = this;
+        clearInterval(vm.intervalTimer);
+        vm.timeTag = 0;
+      }
+    },
+    watch: {
+      id: function(id) {
+        var vm = this;
+        var keyA = id.substring(0, 2),
+                keyB = id.substring(2, 2),
+                keyC = id.substring(4, 2),
+                str = '',
+                a = keyA && IDCard[keyA],
+                b = keyB && a && a[keyB],
+                c = keyC && b && b[keyC];
+        a = a && a.name;
+        b = b && b.name;
+        str = (a + ' ' + b + ' ' + c).replace(/undefined/g, 'xx');
+        // birthday
+        var date = ['', '', ''];
+        if (id.length > 6) {
+          date[0] = id.substring(6, 4);
+          if (id.length > 10) {
+            date[1] = id.substring(10, 2);
+            if (id.length > 12) {
+              date[2] = id.substring(12, 2);
+            }
+          }
+        }
+        str += date.join(' ');
+        // sex
+        var sex = '';
+        if (id.length > 16) {
+          sex = id.substring(16, 1) % 2 == 0 ? ' 女 ' : ' 男 ';
+        }
+        str += sex;
+        vm.show = str;
+      }
+    }
+  });
+</script>
+</body>
+
+</html>
